@@ -33,13 +33,11 @@ def guessing_numbers(n):
             start_number = mid_number
             mid_number = math.ceil((start_number+end_number)/2)
             counting = counting + 1
-            print(answer, counting, start_number, mid_number, end_number)
         elif answer < mid_number:
             end_number = mid_number
             start_number = 1
             mid_number = math.ceil((start_number+end_number)/2)
             counting = counting + 1
-            print(answer, counting, start_number, mid_number, end_number)
         while answer != mid_number:
             if answer > mid_number:
                 start_number = mid_number
@@ -53,7 +51,7 @@ def guessing_numbers(n):
                 if mid_number < answer:
                     start_number = mid_number
                 counting = counting + 1
-        return (answer, counting)
+        return (counting, answer)
 
 for _ in range(10):
     final_count = guessing_numbers(10000)[0]
